@@ -7,6 +7,10 @@ import io
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.vgg16 import VGG16
 
+import urllib.request
+urllib.request.urlretrieve("https://firebasestorage.googleapis.com/v0/b/books-68839.appspot.com/o/model_V1.h5?alt=media&token=00176109-597e-4335-808e-f5b632a07f87", "model_V1.h5")
+
+
 model = None
 
 app = flask.Flask(__name__)
